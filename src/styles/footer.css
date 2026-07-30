@@ -1,0 +1,39 @@
+.footer{
+
+padding:50px 8%;
+
+background:#0B0B0B;
+
+text-align:center;
+
+border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+.footer h3{
+
+font-size:32px;
+
+margin-bottom:15px;
+
+}
+
+.footer p{
+
+color:#bfbfbf;
+
+margin-bottom:10px;
+
+}
+
+.footer span{
+
+display:block;
+
+margin-top:25px;
+
+color:#666;
+
+font-size:14px;
+
+}
