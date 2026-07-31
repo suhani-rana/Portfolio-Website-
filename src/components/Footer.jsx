@@ -1,22 +1,69 @@
 import "../styles/footer.css";
 
+import {
+  FaGithub,
+  FaLinkedin,
+  FaWhatsapp,
+  FaHeart
+} from "react-icons/fa";
+
+import profile from "../data/profile";
+
 function Footer() {
   return (
     <footer className="footer">
 
-      <h3>Suhani Rana</h3>
+      <div className="footer-content">
 
-      <p>
-        Thank you for visiting my portfolio.
-      </p>
+        <h2>Suhani Rana</h2>
 
-      <p>
-        Let's build something amazing together.
-      </p>
+        <p>
+          Aspiring Data Analyst • Python Developer • Tech Explorer
+        </p>
 
-      <span>
-        © 2026 Suhani Rana. All Rights Reserved.
-      </span>
+        <div className="footer-social">
+
+          <a
+            href={profile.github}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaGithub />
+          </a>
+
+          <a
+            href={profile.linkedin}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaLinkedin />
+          </a>
+
+          <a
+            href={`https://wa.me/${profile.phone}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaWhatsapp />
+          </a>
+
+        </div>
+
+        <div className="footer-bottom">
+
+          <p>
+
+            Made with
+
+            <FaHeart className="heart" />
+
+            by Suhani Rana © {new Date().getFullYear()}
+
+          </p>
+
+        </div>
+
+      </div>
 
     </footer>
   );

@@ -1,21 +1,45 @@
 import "../styles/hero.css";
-import profile from "../assets/images/profile.jpeg";
+import profile from "../data/profile";
+import profileImage from "../assets/images/profile.jpeg";
+
 import { Typewriter } from "react-simple-typewriter";
+import { motion } from "framer-motion";
+
+import {
+  fadeUp,
+  fadeLeft,
+  fadeRight,
+} from "../utils/animation";
+
+import {
+  FaWhatsapp,
+  FaDownload,
+  FaEye,
+} from "react-icons/fa";
 
 function Hero() {
   return (
-    <section id="home" className="hero">
+    <motion.section
+      id="home"
+      className="hero"
+      variants={fadeUp}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.25 }}
+    >
       <div className="hero-content">
 
         {/* LEFT SIDE */}
-        <div className="hero-text">
-
+        <motion.div
+          className="hero-text"
+          variants={fadeLeft}
+        >
           <span className="hero-badge">
             🚀 Open to Internships & Entry-Level Opportunities
           </span>
 
           <h1>
-            Hi, I'm <span>Suhani Rana</span>
+            Hi, I'm <span>{profile.name}</span>
           </h1>
 
           <h2>
@@ -36,35 +60,34 @@ function Hero() {
             />
           </h2>
 
-          <p>
-            Passionate about technology, data, and solving real-world problems.
-            I enjoy building practical projects, learning modern technologies,
-            and continuously improving my skills.
-          </p>
+          <p>{profile.bio}</p>
 
           <div className="hero-buttons">
 
             <a
-              href="/resume.pdf"
+              href={profile.resume}
               target="_blank"
               rel="noreferrer"
             >
-              View Resume
+              <FaEye />
+              <span>View Resume</span>
             </a>
 
             <a
-              href="/resume.pdf"
+              href={profile.resume}
               download
             >
-              Download Resume
+              <FaDownload />
+              <span>Download Resume</span>
             </a>
 
             <a
-              href="https://wa.me/919311890883"
+              href={`https://wa.me/${profile.whatsapp}`}
               target="_blank"
               rel="noreferrer"
             >
-              Connect With Me
+              <FaWhatsapp />
+              <span>Connect With Me</span>
             </a>
 
           </div>
@@ -82,31 +105,33 @@ function Hero() {
             </div>
 
             <div className="stat-card">
-              <h3>100%</h3>
-              <p>Learning</p>
+              <h3>2026</h3>
+              <p>Graduated</p>
             </div>
 
           </div>
 
-        </div>
+        </motion.div>
 
         {/* RIGHT SIDE */}
-
-        <div className="hero-image">
+        <motion.div
+          className="hero-image"
+          variants={fadeRight}
+        >
 
           <div className="image-glow"></div>
 
           <div className="image-frame">
             <img
-              src={profile}
-              alt="Suhani Rana"
+              src={profileImage}
+              alt={profile.name}
             />
           </div>
 
-        </div>
+        </motion.div>
 
       </div>
-    </section>
+    </motion.section>
   );
 }
 

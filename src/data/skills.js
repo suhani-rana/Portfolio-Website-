@@ -1,19 +1,28 @@
 const skills = [
   {
     category: "Programming",
-    items: ["Python", "SQL"]
+    skills: [
+      { name: "Python", level: 85 },
+      { name: "SQL", level: 80 },
+      { name: "JavaScript", level: 60 }
+    ]
   },
   {
     category: "Data Analytics",
-    items: ["Microsoft Excel", "Data Analysis"]
+    skills: [
+      { name: "Excel", level: 90 },
+      { name: "Power BI", level: 60 },
+      { name: "Data Analysis", level: 85 }
+    ]
   },
   {
     category: "Tools",
-    items: ["Git", "GitHub", "VS Code", "MySQL"]
-  },
-  {
-    category: "Currently Learning",
-    items: ["JavaScript", "React", "Power BI"]
+    skills: [
+      { name: "Git", level: 75 },
+      { name: "GitHub", level: 80 },
+      { name: "VS Code", level: 90 },
+      { name: "MySQL", level: 80 }
+    ]
   }
 ];
 

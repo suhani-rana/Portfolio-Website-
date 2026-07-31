@@ -2,6 +2,12 @@ import "../styles/projects.css";
 import projects from "../data/projects";
 import SectionTitle from "./SectionTitle";
 
+import {
+  FaGithub,
+  FaExternalLinkAlt,
+  FaStar
+} from "react-icons/fa";
+
 function Projects() {
   return (
     <section id="projects" className="projects">
@@ -18,7 +24,21 @@ function Projects() {
           <div className="project-card" key={project.id}>
 
             <div className="project-image">
-              <img src={project.image} alt={project.title} />
+
+              <img
+                src={project.image}
+                alt={project.title}
+              />
+
+              <div className="project-overlay">
+
+                <span className="featured-badge">
+                  <FaStar />
+                  Featured
+                </span>
+
+              </div>
+
             </div>
 
             <div className="project-content">
@@ -30,7 +50,11 @@ function Projects() {
               <div className="tech-stack">
 
                 {project.tech.map((tech, index) => (
-                  <span key={index}>{tech}</span>
+
+                  <span key={index}>
+                    {tech}
+                  </span>
+
                 ))}
 
               </div>
@@ -42,6 +66,7 @@ function Projects() {
                   target="_blank"
                   rel="noreferrer"
                 >
+                  <FaGithub />
                   GitHub
                 </a>
 
@@ -50,6 +75,7 @@ function Projects() {
                   target="_blank"
                   rel="noreferrer"
                 >
+                  <FaExternalLinkAlt />
                   Live Demo
                 </a>
 

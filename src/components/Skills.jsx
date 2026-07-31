@@ -13,21 +13,36 @@ function Skills() {
 
       <div className="skills-grid">
 
-        {skills.map((skill, index) => (
+        {skills.map((category, index) => (
 
           <div className="skill-card" key={index}>
 
-            <h3>{skill.category}</h3>
+            <h3>{category.category}</h3>
 
-            <div className="skill-list">
+            {category.skills.map((skill, i) => (
 
-              {skill.items.map((item, i) => (
+              <div className="skill-item" key={i}>
 
-                <span key={i}>{item}</span>
+                <div className="skill-info">
 
-              ))}
+                  <span>{skill.name}</span>
 
-            </div>
+                  <span>{skill.level}%</span>
+
+                </div>
+
+                <div className="progress">
+
+                  <div
+                    className="progress-fill"
+                    style={{ width: `${skill.level}%` }}
+                  ></div>
+
+                </div>
+
+              </div>
+
+            ))}
 
           </div>
 
