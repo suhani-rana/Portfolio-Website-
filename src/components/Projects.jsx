@@ -5,7 +5,7 @@ import SectionTitle from "./SectionTitle";
 import {
   FaGithub,
   FaExternalLinkAlt,
-  FaStar
+  FaStar,
 } from "react-icons/fa";
 
 function Projects() {
@@ -13,7 +13,7 @@ function Projects() {
     <section id="projects" className="projects">
 
       <SectionTitle
-        subtitle="PROJECTS"
+        subtitle="MY WORK"
         title="Featured Projects"
       />
 
@@ -34,7 +34,7 @@ function Projects() {
 
                 <span className="featured-badge">
                   <FaStar />
-                  Featured
+                  Featured Project
                 </span>
 
               </div>
@@ -42,6 +42,10 @@ function Projects() {
             </div>
 
             <div className="project-content">
+
+              <span className="project-tag">
+                Portfolio Project
+              </span>
 
               <h3>{project.title}</h3>
 
@@ -67,7 +71,7 @@ function Projects() {
                   rel="noreferrer"
                 >
                   <FaGithub />
-                  GitHub
+                  Source Code
                 </a>
 
                 <a
@@ -76,7 +80,7 @@ function Projects() {
                   rel="noreferrer"
                 >
                   <FaExternalLinkAlt />
-                  Live Demo
+                  View Project
                 </a>
 
               </div>

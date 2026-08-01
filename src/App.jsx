@@ -1,3 +1,5 @@
+import ScrollProgress from "./components/ScrollProgress";
+import BackToTop from "./components/BackToTop";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -7,9 +9,12 @@ import Projects from "./components/Projects";
 import Services from "./components/Services";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+
 function App() {
   return (
     <>
+      <ScrollProgress />
+      <BackToTop />
       <Navbar />
       <Hero />
       <About />
@@ -19,6 +24,7 @@ function App() {
       <Services />
       <Contact />
       <Footer />
+    
     </>
   );
 }

@@ -15,8 +15,8 @@ function Contact() {
     <section id="contact" className="contact">
 
       <SectionTitle
-        subtitle="CONTACT"
-        title="Let's Connect"
+        subtitle="GET IN TOUCH"
+        title="Contact Me"
       />
 
       <div className="contact-container">
@@ -25,13 +25,10 @@ function Contact() {
 
         <div className="contact-info">
 
-          <h3>Let's Build Something Amazing 🚀</h3>
+          <h3>Let's Work Together</h3>
 
           <p>
-            I'm currently looking for internships,
-            freelance work and entry-level opportunities.
-            If you have an exciting project or job opportunity,
-            I'd love to hear from you.
+            I'm actively seeking internships, freelance projects, and entry-level opportunities in Data Analytics and Software Development. If you have an opportunity or would like to collaborate, I'd love to hear from you.
           </p>
 
           <div className="info-card">

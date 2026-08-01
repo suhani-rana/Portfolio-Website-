@@ -1,19 +1,19 @@
 const profile = {
   name: "Suhani Rana",
 
-  title: "BCA Graduate | Aspiring Data Analyst",
+  title: "Aspiring Data Analyst",
 
-  bio: "Passionate about technology, data analytics and solving real-world problems. Currently looking for internships and entry-level opportunities where I can learn, grow and contribute.",
+  bio: "Aspiring Data Analyst with a strong foundation in Excel, SQL, Python, and React. Passionate about transforming raw data into meaningful insights and building user-focused applications. Currently seeking internship and entry-level opportunities to learn, grow, and contribute.",
 
-  email: "YOUR_EMAIL@gmail.com",
+  email: "ranasuhani45@gmail.com",
 
-  phone: "+91XXXXXXXXXX",
+  phone: "+91 93118 90883",
 
-  whatsapp: "91XXXXXXXXXX",
+  whatsapp: "919311890883",
 
-  github: "https://github.com/YOUR_USERNAME",
+  github: "https://github.com/suhani-rana",
 
-  linkedin: "https://linkedin.com/in/YOUR_USERNAME",
+  linkedin: "https://linkedin.com/in/suhanirana/",
 
   resume: "/resume.pdf",
 
@@ -22,8 +22,18 @@ const profile = {
   education: {
     degree: "Bachelor of Computer Applications (BCA)",
     university: "Delhi Skill and Entrepreneurship University (DSEU)",
-    year: "2026"
-  }
+    year: "2026",
+  },
+
+  skills: [
+    "Excel",
+    "SQL",
+    "Python",
+    "React",
+    "JavaScript",
+    "Git",
+    "GitHub",
+  ],
 };
 
 export default profile;

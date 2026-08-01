@@ -39,17 +39,17 @@ function Hero() {
           </span>
 
           <h1>
-            Hi, I'm <span>{profile.name}</span>
+            Hello, I'm <span>{profile.name}</span>
           </h1>
 
           <h2>
             <Typewriter
               words={[
                 "Aspiring Data Analyst",
-                "Python Developer",
-                "SQL Enthusiast",
                 "Excel Dashboard Creator",
-                "Tech Explorer",
+                "SQL Enthusiast",
+                "Python Programmer",
+                "React Learner",
               ]}
               loop={0}
               cursor
@@ -96,17 +96,17 @@ function Hero() {
 
             <div className="stat-card">
               <h3>4+</h3>
-              <p>Projects</p>
+              <p>Projects Built</p>
             </div>
 
             <div className="stat-card">
-              <h3>BCA</h3>
-              <p>Graduate</p>
+              <h3>Excel</h3>
+              <p>SQL • Python</p>
             </div>
 
             <div className="stat-card">
-              <h3>2026</h3>
-              <p>Graduated</p>
+              <h3>Open</h3>
+              <p>Internships</p>
             </div>
 
           </div>
