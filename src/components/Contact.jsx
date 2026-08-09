@@ -1,3 +1,6 @@
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
+
 import "../styles/contact.css";
 import profile from "../data/profile";
 import SectionTitle from "./SectionTitle";
@@ -11,6 +14,29 @@ import {
 } from "react-icons/fa";
 
 function Contact() {
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_xr0d2xp",
+        "template_ux2uovg",
+        form.current,
+        "cMRboNWnUdJM8v7nd"
+      )
+      .then(() => {
+        alert("Message Sent Successfully ✅");
+        form.current.reset();
+      })
+      .catch((error) => {
+        console.error(error);
+        alert("Failed to send message ❌");
+      });
+  };
+
   return (
     <section id="contact" className="contact">
 
@@ -28,7 +54,10 @@ function Contact() {
           <h3>Let's Work Together</h3>
 
           <p>
-            I'm actively seeking internships, freelance projects, and entry-level opportunities in Data Analytics and Software Development. If you have an opportunity or would like to collaborate, I'd love to hear from you.
+            I'm actively seeking internships, freelance projects,
+            and entry-level opportunities in Data Analytics and
+            Software Development. If you have an opportunity or
+            would like to collaborate, I'd love to hear from you.
           </p>
 
           <div className="info-card">
@@ -107,29 +136,41 @@ function Contact() {
 
         {/* RIGHT */}
 
-        <form className="contact-form">
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className="contact-form"
+        >
 
           <input
             type="text"
+            name="name"
             placeholder="Your Name"
+            required
           />
 
           <input
             type="email"
+            name="email"
             placeholder="Your Email"
+            required
           />
 
           <input
             type="text"
+            name="title"
             placeholder="Subject"
+            required
           />
 
           <textarea
+            name="message"
             rows="6"
             placeholder="Your Message"
+            required
           ></textarea>
 
-          <button>
+          <button type="submit">
 
             <FaPaperPlane />
 
