@@ -1,6 +1,6 @@
 import "../styles/hero.css";
 import profile from "../data/profile";
-import profileImage from "../assets/images/profile.jpeg";
+import profileImage from "../assets/images/Profile.jpeg";
 
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
